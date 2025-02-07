@@ -60,22 +60,5 @@ def find_language_facts(languages, language_name, fact_index = 0)
   #                 initial_release: 'December 4, 1995',
   #                 is_beautiful?: false }
   # }
-  result = nil
-  languages.each do |language, info|
-    if language == language_name
-      result = info[:facts][fact_index]
-    end
-  end 
-  result
+  languages.dig(language_name, :facts, fact_index)
 end
-
-hash = {
-  ruby: { facts: ['was made for programmer happiness', 'its code is beautiful'],
-          initial_release: 'December 25, 1996',
-          is_beautiful?: true },
-
-  javascript: { facts: ['you have to use semicolons everywhere', "its real name isn't even javascript"],
-                initial_release: 'December 4, 1995',
-                is_beautiful?: false }
-}
-find_language_facts(hash, :javascript, 1)
