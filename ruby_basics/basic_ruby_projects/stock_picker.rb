@@ -34,3 +34,8 @@ p stock_picker([9,1,7,14]) # [1,3]
 p stock_picker([14,1,7,9]) # [1,3]
 p stock_picker([1,14,7,9]) # [0,1]
 p stock_picker([2,14,17,1]) # [0,2]
+p stock_picker([3,1,8]) # [1,2]
+p stock_picker([1])
+p stock_picker([1,1,1])
+# p stock_picker([])
+p stock_picker([5,4,3,2,1])
