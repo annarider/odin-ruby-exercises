@@ -2,11 +2,10 @@ def bubble_sort(array)
   swapped_times = 1
   while swapped_times > 0 
     swapped_times = 0
-      array.each_with_index do |item, index|
+    array.each_with_index do |item, index|
       if index < array.length - 1 and item > array[index + 1]
         array[index], array[index + 1] = array[index + 1], item
         swapped_times += 1
-      else
       end
     end
   end
