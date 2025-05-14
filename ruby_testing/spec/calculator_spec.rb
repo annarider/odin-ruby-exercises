@@ -18,5 +18,8 @@ describe Calculator do
     it "returns the product of two numbers" do
       expect(calculator.multiply(3, 8)).to equal(24)
     end
+    it "returns the product of two different numbers" do
+      expect(calculator.multiply(9, 0)).to equal(0)
+    end
   end
 end
